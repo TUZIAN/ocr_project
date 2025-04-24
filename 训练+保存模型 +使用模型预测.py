@@ -17,13 +17,13 @@ DATA_PATH = "F:/ai/ocr_recognition/dataset/train_labels_extracted.csv"
 
 # 🚩 关键词映射分类标签
 category_keywords = {
-    "餐饮": ["米饭", "炒饭", "面", "饮料", "饭", "鸡", "牛肉", "套餐", "快餐", "noodle", "rice", "meal", "burger", "soup", "drink", "pizza", "pasta", "coffee", "starbucks", "mcdonald's", "kfc", "sandwich", "taco", "salad", "sushi"],
-    "购物": ["衣服", "鞋", "裤", "裙", "t-shirt", "clothes", "shoes", "dress", "bag", "jacket", "watch", "jeans", "sneakers", "outfit", "sweater", "nike", "adidas", "h&m", "zara", "uniqlo", "gucci", "lv", "prada", "chanel"],
-    "交通": ["地铁", "公交", "出租车", "高铁", "metro", "bus", "taxi", "transportation", "subway", "train", "airline", "flight", "uber", "lyft", "bolt", "grab", "car rental", "bus ticket"],
-    "医疗": ["药", "医院", "体检", "诊费", "medicine", "clinic", "hospital", "pharmacy", "doctor", "prescription", "dentist", "vaccination", "medical", "healthcare", "surgery"],
-    "教育": ["培训", "学费", "课程", "education", "tuition", "class", "school", "university", "online course", "workshop", "degree", "certification", "exam", "study materials", "language course", "esl"],
-    "娱乐": ["电影", "游戏", "KTV", "影票", "cinema", "game", "movie", "ticket", "concert", "show", "theater", "theme park", "sports event", "netflix", "playstation", "xbox", "nintendo", "event ticket", "party", "club"],
-    "外卖": ["delivery", "rider", "Deliveroo", "Meituan", "Ele.me", "外卖", "配送单", "外卖单", "uber eats", "grubhub", "door dash", "postmates", "food delivery", "takeout", "just eat", "seamless", "food panda", "zomato"]
+    "餐饮(Dining)": ["米饭", "炒饭", "面", "饮料", "饭", "鸡", "牛肉", "套餐", "快餐", "noodle", "rice", "meal", "burger", "soup", "drink", "pizza", "pasta", "coffee", "starbucks", "mcdonald's", "kfc", "sandwich", "taco", "salad", "sushi"],
+    "购物(Shopping)": ["衣服", "鞋", "裤", "裙", "t-shirt", "clothes", "shoes", "dress", "bag", "jacket", "watch", "jeans", "sneakers", "outfit", "sweater", "nike", "adidas", "h&m", "zara", "uniqlo", "gucci", "lv", "prada", "chanel"],
+    "交通(Transportation)": ["地铁", "公交", "出租车", "高铁", "metro", "bus", "taxi", "transportation", "subway", "train", "airline", "flight", "uber", "lyft", "bolt", "grab", "car rental", "bus ticket"],
+    "医疗(Medical)": ["药", "医院", "体检", "诊费", "medicine", "clinic", "hospital", "pharmacy", "doctor", "prescription", "dentist", "vaccination", "medical", "healthcare", "surgery"],
+    "教育(Education)": ["培训", "学费", "课程", "education", "tuition", "class", "school", "university", "online course", "workshop", "degree", "certification", "exam", "study materials", "language course", "esl"],
+    "娱乐(entertainment)": ["电影", "游戏", "KTV", "影票", "cinema", "game", "movie", "ticket", "concert", "show", "theater", "theme park", "sports event", "netflix", "playstation", "xbox", "nintendo", "event ticket", "party", "club"],
+    "外卖(takeout)": ["delivery", "rider", "Deliveroo", "Meituan", "Ele.me", "外卖", "配送单", "外卖单", "uber eats", "grubhub", "door dash", "postmates", "food delivery", "takeout", "just eat", "seamless", "food panda", "zomato"]
 }
 
 # 🧠 OCR 实例（中英文）
@@ -132,7 +132,7 @@ def upload_and_classify():
         ocr_text = ocr_recognize_receipt(file_path)
         category = classify_new_receipt(ocr_text)
         amount, merchant = extract_info_from_text(ocr_text)
-        print(f"\n🧾 分类：{category} ｜ 💰 金额：{amount} ｜ 🏬 商户：{merchant}")
+        print(f"\n🧾 分类(Classification)：{category} ｜ 💰 金额(Amount)：{amount} ｜ 🏬 商户(Merchants)：{merchant}")
 
 # 🚪 程序入口
 if __name__ == "__main__":

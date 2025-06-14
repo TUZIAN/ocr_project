@@ -1,0 +1,24 @@
+﻿image_path,text,category,date,amount,merchant
+F:/ai/ocr_recognition/dataset/train/images/en_852.jpg,"Charm
+clothing store
+1/F,britain Insurance Building
+48 Sydney Avenue,
+Sydney
+Waiter:
+CHK:
+01000/1
+0pen at:2021-02-13 10:57:12
+TBL:
+21
+GST:2
+coat
+3
+$27.00
+Subtotal:
+$27.00
+10%Service Charge:
+$2.70
+total:
+$29.70
+Times of Printing:1
+Thank you!",其他,2021/02/13,29.7,Charm
